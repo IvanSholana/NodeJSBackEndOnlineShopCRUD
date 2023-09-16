@@ -1,1 +1,15 @@
-<h1>ADD PRODUCT PAGE</h1>
+<h1>ADMIN PRODUCT PAGE</h1>
+<p>list of product</p>
+<div class="container-product">
+  {{#each product}}
+    <div class="product">
+      <img src={{this.imgURL}} alt="" width="100px" />
+      <h1>{{this.title}}</h1>
+      <p>{{this.description}}</p>
+      <p>harga : {{this.price}}</p>
+      <a href="delete-product/{{this.id}}" class="button-link">Hapus</a>
+      <a href="edit-product/{{this.id}}" class="button-link">Edit</a>
+    </div>
+
+  {{/each}}
+</div>

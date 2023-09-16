@@ -23,15 +23,43 @@ nav a {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-h1 {
+h1,
+p {
   text-align: center;
 }
 
 .add-product {
   text-align: center;
   margin: auto;
+  width: fit-content;
 }
 
 .add-product input {
   margin-bottom: 10px;
+}
+
+.product {
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+  width: fit-content;
+}
+
+.container-product {
+  display: flex;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Warna latar belakang */
+  color: #fff; /* Warna teks */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Menggunakan sudut melengkung pada tombol */
+}
+
+.button-link:hover {
+  background-color: #0056b3; /* Warna latar belakang saat digulirkan (hover) */
+  color: #fff; /* Warna teks saat digulirkan (hover) */
 }
