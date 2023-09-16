@@ -1,0 +1,37 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  margin-right: 50px;
+}
+
+nav {
+  background-color: greenyellow;
+  padding: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-product {
+  text-align: center;
+  margin: auto;
+}
+
+.add-product input {
+  margin-bottom: 10px;
+}
