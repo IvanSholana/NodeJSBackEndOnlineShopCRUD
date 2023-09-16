@@ -1,7 +1,9 @@
 const Product = require("../models/admin-product");
 
 const saveProduct = (req, res, next) => {
-  console.log(req.body);
+  const { title, imgURL, description, price } = req.body;
+  const newProduct = new Product(title, imgURL, description, price);
+  newProduct.save();
   res.redirect("/");
 };
 

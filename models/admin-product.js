@@ -13,16 +13,23 @@ class Product {
 
   async save() {
     try {
+      let data = [];
       const content = await fs.readFile(pathFile, "utf8");
-      const data = content ? JSON.parse(content) : [];
+      data = content ? JSON.parse(content) : [];
       data.push(this);
-      await fs.writeFile(pathFile, JSON.stringify(data));
+      await fs.writeFile(pathFile, JSON.stringify(data), "utf8");
+      console.log("Data berhasil ditambahkan.");
     } catch (err) {
-      console.error("Gagal menyimpan data:", err);
+      await fs.writeFile(pathFile, JSON.stringify([this]), "utf8");
     }
   }
 
   static async fetchAll() {
+    try {
+      await fs.access(pathFile);
+    } catch (err) {
+      await fs.writeFile(pathFile, "[]");
+    }
     try {
       const content = await fs.readFile(pathFile, "utf8");
       const data = content ? JSON.parse(content) : [];
