@@ -24,14 +24,14 @@ const showOrderPage = (req, res, next) => {
 };
 
 const editProduct = async (req, res, next) => {
-  let data = await Product.fetchAll();
-  data = data.filter((e) => data.id == req.params.id);
-
+  data = await Product.ediData(req.params.id);
+  const { id, title, imgURL, description, price } = data;
   res.render("admin/editProduct", {
-    titleValue: data[0].title,
-    imgValue: data[0].imgURL,
-    descValue: data[0].description,
-    priceValue: data[0].price,
+    productTitle: title,
+    imgURL,
+    description,
+    price,
+    id: id,
   });
 };
 

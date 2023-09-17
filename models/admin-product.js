@@ -68,6 +68,11 @@ class Product {
       return [];
     }
   }
+  static async ediData(id) {
+    const data = await this.fetchAll();
+    const dataIndex = data.findIndex((e) => e.id == id);
+    return data[dataIndex];
+  }
 }
 
 module.exports = Product;

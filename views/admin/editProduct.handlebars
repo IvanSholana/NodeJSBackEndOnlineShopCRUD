@@ -1,32 +1,24 @@
 <h1>EDIT PRODUCT PAGE</h1>
 <form action="/admin/add-product" method="post">
   <div class="add-product">
+    <input type="hidden" value="{{id}}" />
     <input
-      value="{{titleValue}}"
+      value="{{productTitle}}"
       type="text"
       name="title"
       placeholder="title"
     />
     <br />
-    <input
-      value="{{imgValue}}"
-      type="text"
-      name="imgURL"
-      placeholder="imgURL"
-    />
+    <input value="{{imgURL}}" type="text" name="imgURL" placeholder="imgURL" />
     <br />
     <input
-      value="{{descValue}}"
+      value="{{description}}"
       type="text"
       name="description"
       placeholder="description"
     /><br />
-    <input
-      value="{{priceValue}}"
-      type="text"
-      name="price"
-      placeholder="price"
-    /><br />
+    <input value="{{price}}" type="text" name="price" placeholder="price" /><br
+    />
     <button type="submit">ADD PRODUCT</button>
   </div>
 
